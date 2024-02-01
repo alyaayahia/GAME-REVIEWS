@@ -1,0 +1,120 @@
+:root {
+  --bg-color: rgb(39, 43, 48);
+  --bg-nav: rgb(58, 73, 123);
+  --color: rgb(13, 202, 240);
+}
+body {
+  background-color: var(--bg-color);
+}
+/* font */
+.nerko-one-regular {
+  font-family: "Nerko One", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.Game {
+  & header img {
+    max-height: 30vh;
+    object-fit: cover;
+  }
+  & .active {
+    color: rgb(6, 145, 196) !important;
+  }
+  & .icon {
+    width: 32px;
+  }
+  & .navbar {
+    background-color: var(--bg-nav) !important;
+    height: 45px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  & .navbar a {
+    color: white;
+    font-size: 11px;
+  }
+  & .nav-link {
+    transition: color 0.5s;
+  }
+  & .nav-link:hover {
+    color: rgb(6, 145, 196);
+  }
+  & .navbar-brand {
+    font-size: 17px !important;
+  }
+  & .item {
+    background-color: var(--bg-color);
+  }
+  & .card {
+    background-color: var(--bg-color);
+    color: white;
+  }
+  & .gameTitle {
+    font-size: 12px;
+    margin: 0;
+  }
+  & .free {
+    font-size: 13px;
+    padding: 3px;
+    background-color: rgb(67, 104, 158);
+    margin: 0;
+  }
+  & .dec {
+    margin: 0;
+    font-size: 10px;
+    opacity: 0.5;
+    text-align: center;
+  }
+  & footer {
+    & span {
+      background-color: rgb(50, 56, 62);
+      font-size: 12px;
+      padding: 1px 3px;
+      font-family: "Nerko One", cursive;
+    }
+  }
+}
+#item {
+  transition: transform 0.5s;
+}
+#item:hover {
+  transform: scale(1.059, 1.059);
+  cursor: pointer;
+}
+.details {
+  & .caption {
+    & span {
+      color: var(--color);
+    }
+  }
+}
+.conatin {
+  background-color: #272b30e3;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+}
+.loading {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 3px solid;
+  border-color: orange transparent;
+  animation: spin 1s infinite ease-out;
+  /* position: absolute;
+  top: 45%;
+  left: 45%;
+  z-index: 9999; */
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
